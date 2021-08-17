@@ -136,11 +136,16 @@ const cheese = new Topping({
   calories: 20,
   price: 10
 })
-
-const testBurger = new Burger({
-  size: 'small',
-  toppings: [cheese]
-})
+const salad = new Topping({
+    name: 'salad',
+    calories: 5,
+    price: 20
+  })
+  const potato = new Topping({
+    name: 'potato',
+    calories: 10,
+    price: 15
+  })
 
 const order = new Order(
   new Burger({
@@ -152,6 +157,10 @@ const order = new Order(
   new Burger({
     size: 'small',
     toppings: [cheese]
+  }),
+  new Burger({
+    size: 'small',
+    toppings: [potato,salad]
   }),
   new Drink({
     drinkName: 'cola',
